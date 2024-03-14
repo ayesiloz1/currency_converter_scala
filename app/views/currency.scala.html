@@ -1,0 +1,41 @@
+@(message: String)
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Currency Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2em;
+        background-color: rgb(36, 32, 27);
+      }
+      form {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>@message</h1>
+    <form action="/convert" method="get">
+      <label for="amount">Amount:</label><br />
+      <input type="number" id="amount" name="amount" required /><br />
+      <label for="from">From:</label><br />
+      <select id="from" name="from">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="TRY">TRY</option></select
+      ><br />
+      <label for="to">To:</label><br />
+      <select id="to" name="to">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="TRY">TRY</option></select
+      ><br />
+      <input type="submit" value="Convert" />
+    </form>
+    <p>@message</p>
+  </body>
+</html>
